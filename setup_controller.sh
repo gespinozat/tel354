@@ -2,6 +2,8 @@
 
 # Set IP to controller:
 sudo ip add add dev ens4 192.168.100.100/24
+sudo ip link set dev ens4 up
+
 
 wget https://github.com/floodlight/floodlight/archive/v1.2.zip
 

@@ -16,18 +16,16 @@ for row in lines:
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         ssh.connect(hostname=row[2], username='ubuntu',password='ubuntu')
         print "Configurando Host/Switch, IP: "+ row[2]
-        stdin, stdout, stderr = ssh.exec_command("echo 'Este es un host u OVS' > test.txt")
-        # stdin, stdout, stderr = ssh.exec_command("git clone https://github.com/gespinozat/tel354.git")
-        # stdin, stdout, stderr = ssh.exec_command("cd tel354 && ./setup_node.sh")
+        stdin, stdout, stderr = ssh.exec_command("git clone https://github.com/gespinozat/tel354.git")
+        stdin, stdout, stderr = ssh.exec_command("cd tel354 && ./setup_node.sh")
         ssh.close()
         
     else:
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         ssh.connect(hostname=row[2], username='ubuntu',password='ubuntu')
-        print "Configurando Controlador, IP: "+ row[2]
-        stdin, stdout, stderr = ssh.exec_command("echo 'Este es un controlador' > test.txt")
-        # stdin, stdout, stderr = ssh.exec_command("git clone https://github.com/gespinozat/tel354.git")
-        # stdin, stdout, stderr = ssh.exec_command("cd tel354 && ./setup_controller.sh")
-        # stdin, stdout, stderr = ssh.exec_command("cd tel354 && ./run_floodlight.sh")
+        print "Configurando Controlador, IP: "+ row[2]        
+        stdin, stdout, stderr = ssh.exec_command("git clone https://github.com/gespinozat/tel354.git")
+        stdin, stdout, stderr = ssh.exec_command("cd tel354 && ./setup_controller.sh")
+        stdin, stdout, stderr = ssh.exec_command("cd tel354 && ./run_controller.sh")
         ssh.close()

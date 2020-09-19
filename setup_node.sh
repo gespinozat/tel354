@@ -51,14 +51,17 @@ esac
 H)
 ## If node is a host
 sudo ip add add dev ens4 10.0.0.1/24
+sudo ip link set dev ens4 up
 ;;
 H2)
 ## If node is a host
 sudo ip add add dev ens4 10.0.0.2/24
+sudo ip link set dev ens4 up
 ;;
 H3)
 ## If node is a host
 sudo ip add add dev ens4 10.0.0.3/24
+sudo ip link set dev ens4 up
 ;;
 esac
 
