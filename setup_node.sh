@@ -12,7 +12,7 @@ sudo ovs-vsctl add-br $node_name
 for i in 4 5 6 7;
 do
 sudo ip link set dev ens$i up
-sudo ovs-vsctl add-port $node_name $i;
+sudo ovs-vsctl add-port $node_name ens$i;
 done
 # Set OVS OpenFlow version
 sudo ovs-vsctl set bridge $node_name protocols=OpenFlow13
@@ -34,7 +34,7 @@ sudo ovs-vsctl add-br $node_name
 for i in 4 6;
 do
 sudo ip link set dev ens$i up
-sudo ovs-vsctl add-port $node_name $i;
+sudo ovs-vsctl add-port $node_name ens$i;
 done
 # Set OVS OpenFlow version
 sudo ovs-vsctl set bridge $node_name protocols=OpenFlow13
@@ -56,7 +56,7 @@ sudo ovs-vsctl add-br $node_name
 for i in 4 6;
 do
 sudo ip link set dev ens$i up
-sudo ovs-vsctl add-port $node_name $i;
+sudo ovs-vsctl add-port $node_name ens$i;
 done
 # Set OVS OpenFlow version
 sudo ovs-vsctl set bridge $node_name protocols=OpenFlow13
@@ -78,7 +78,7 @@ sudo ovs-vsctl add-br $node_name
 for i in 5 7;
 do
 sudo ip link set dev ens$i up
-sudo ovs-vsctl add-port $node_name $i;
+sudo ovs-vsctl add-port $node_name ens$i;
 done
 # Set OVS OpenFlow version
 sudo ovs-vsctl set bridge $node_name protocols=OpenFlow13
@@ -100,7 +100,7 @@ sudo ovs-vsctl add-br $node_name
 for i in 4 5;
 do
 sudo ip link set dev ens$i up
-sudo ovs-vsctl add-port $node_name $i;
+sudo ovs-vsctl add-port $node_name ens$i;
 done
 # Set OVS OpenFlow version
 sudo ovs-vsctl set bridge $node_name protocols=OpenFlow13

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set IP to controller:
-sudo ip add add dev ens4 192.168.100.100/24
+sudo ip add add dev ens4 192.168.200.200/24
 sudo ip link set dev ens4 up
 
 
