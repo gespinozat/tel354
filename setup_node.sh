@@ -11,7 +11,7 @@ done
 node_name=$(hostname)
 
 case $node_name in
-Switch[1-5])
+S[1-5])
 ## If node is a switch
 
 # Create OVS
@@ -48,15 +48,15 @@ sudo ip add add dev $node_name 192.168.100.105/24
 ;;
 esac
 ;;
-Host1)
+H)
 ## If node is a host
 sudo ip add add dev ens4 10.0.0.1/24
 ;;
-Host2)
+H2)
 ## If node is a host
 sudo ip add add dev ens4 10.0.0.2/24
 ;;
-Host3)
+H3)
 ## If node is a host
 sudo ip add add dev ens4 10.0.0.3/24
 ;;
