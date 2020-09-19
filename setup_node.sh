@@ -33,18 +33,23 @@ sudo ovs-vsctl set-controller $node_name tcp:192.168.100.100
 case $node_name in
 S1)
 sudo ip add add dev $node_name 192.168.100.101/24
+sudo ip link set dev $node_name up
 ;;
 S2)
 sudo ip add add dev $node_name 192.168.100.102/24
+sudo ip link set dev $node_name up
 ;;
 S3)
 sudo ip add add dev $node_name 192.168.100.103/24
+sudo ip link set dev $node_name up
 ;;
 S4)
 sudo ip add add dev $node_name 192.168.100.104/24
+sudo ip link set dev $node_name up
 ;;
 S5)
 sudo ip add add dev $node_name 192.168.100.105/24
+sudo ip link set dev $node_name up
 ;;
 esac
 ;;
